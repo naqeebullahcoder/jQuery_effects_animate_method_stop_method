@@ -5,105 +5,39 @@
 <head>
     <meta charset="utf-8">
     <title>Jquery Practics</title>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   
 </head>
 <body>
 
-<!-- Display Effects-->
+    <button id="start">Start Animation</button>
+    <button id="stop">Stop Animation</button>
 
- <!--    <h1> Welcome to JQuery </h1>
-        <button id="show">Show</button>
-        <button id="hide">Hide</button>
-        <button id="toggle">Toggle</button>
+    <h1 style="color: red;position: absolute;">Welcome to JQuery</h1><br><br><br>
+    <h2 style="color:green; position: absolute;"  >Welcome to JQuery</h1><br><br>
+    <h3 style="color: blue; position: absolute;">Welcome to JQuery</h1><br><br>
+    
 
-    <script>        
-        $(document).ready(function(){
-            $("#hide").click(function(){
-                $("h1").hide();
+    <script>
+       $(document).ready(function(){
+          $("#start").click(function(){
+            $("h1").animate({top: '300px'}, 5000);
+            $("h2").animate({top: '400px'},"slow");
+            $("h3").animate({top: '500px'},"fast");
+
+            $("h1").animate({
+                left: '500px',
+                fontSize:'60px'
+            }, 5000);
+
+               $("h1").delay(4000).fadeOut();
             });
 
-            $("#show").click(function(){
-                $("h1").show();
-            });
-            $("#toggle").click(function(){
-                 $("h1").toggle();
-            })
-        });
-    </script>  
- -->
-
- <!-- Fadding Effects-->
-
-  <!-- FadeIn Effects-->
-<!-- 
-    <h1 style="display: none; color: red;">Welcome to JQuery</h1>
-    <h2 style="display: none; color:green" >Welcome to JQuery</h1>
-    <h3 style="display: none; color: blue;">Welcome to JQuery</h1>
-    <button>Click on Button</button>
- -->
-<!--     <script>
-       $(document).ready(function(){
-          $("button").click(function(){
-            $("h1").fadeIn(2000);
-            $("h2").fadeIn(4000);
-            $("h3").fadeIn(5000);
-          });
-       });
-    </script> -->
-
-<!-- FadeOut Effects-->
-<!-- 
-    <h1 style="color: red;">Welcome to JQuery</h1>
-    <h2 style="color:green" >Welcome to JQuery</h1>
-    <h3 style="color: blue;">Welcome to JQuery</h1>
-    <button>Click on Button</button>
-
-    <script>
-       $(document).ready(function(){
-          $("button").click(function(){
-            $("h1").fadeOut(2000);
-            $("h2").fadeOut(4000);
-            $("h3").fadeOut(5000);
-          });
-       });
-    </script> -->
-
-    <!-- FadeToggle Effects-->
-
-  <!--   <h1 style="color: red;">Welcome to JQuery</h1>
-    <h2 style="color:green" >Welcome to JQuery</h1>
-    <h3 style="color: blue;">Welcome to JQuery</h1>
-    <button>Click on Button Toggle</button>
-
-    <script>
-       $(document).ready(function(){
-          $("button").click(function(){
-            $("h1").fadeToggle(2000);
-            $("h2").fadeToggle(4000);
-            $("h3").fadeToggle(5000);
-          });
-       });
-    </script> -->
-
-
-    <!-- FadeTo Effects-->
-
-    <h1 style="color: red;">Welcome to JQuery</h1>
-    <h2 style="color:green" >Welcome to JQuery</h1>
-    <h3 style="color: blue;">Welcome to JQuery</h1>
-    <button>Click on Button Toggle</button>
-
-    <script>
-       $(document).ready(function(){
-          $("button").click(function(){
-            $("h1").fadeTo(2000, 0.9);
-            $("h2").fadeTo(4000, 0.5);
-            $("h3").fadeTo(5000, 0.2);
-          });
+             $("#stop").click(function(){
+                $("h1").stop();
+           });
+          
        });
     </script>
 </body>
